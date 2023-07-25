@@ -1,15 +1,24 @@
 <?php
 
 namespace App\Controllers;
-
+use  App\Models\Tours;
 class Cards extends BaseController
 {
     public function index()
     {
-        return view('cards/index');
+        $Tours = new Tours();
+        
+        $AllTours=$Tours->listartour();
+        
+        $data =[
+            "datos" => $AllTours,
+                    
+        ];
+        return view('cards/index',$data);
     }
-    public function contenido()
+    public function contenido($parametro)
     {
+                
         return view('cards/contenido');
     }
 }

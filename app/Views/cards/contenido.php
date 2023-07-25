@@ -1,47 +1,13 @@
-<!DOCTYPE html>
-<html lang="es">
+<?= $this->extend('Menu/menu')?>
+<?= $this->section('contenido')?>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>contenido</title>
-    <!-- Agrega la referencia a Bootstrap CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <style>
-        /* Estilos adicionales */
-        .custom-border {
-            background-color: #f1f1f1;
-            border: 2px solid #888;
-            border-radius: 15px;
-            height: 100%;
-        }
 
-        /* Estilos para la línea azul */
-        .blue-line {
-            border-top: 1px solid blue;
-            margin: 20px 0;
-        }
-
-        /* Estilos para el título en azul pequeño */
-        .blue-title {
-            color: blue;
-            font-size: 18px;
-            font-weight: bold;
-            margin-top: 0px;
-            margin-bottom: -20px;
-        }
-        .row{
-            margin-top: 20px;
-        }
-
-    </style>
-</head>
 
 <body>
     <div class="container mt-5">
     
-    <h1>Visor de PDF con Google Docs Viewer</h1>
-    <iframe src="https://docs.google.com/gview?url=https://drive.google.com/file/d/1vozN8rssg7kuxGZjRItHb_xXGY19CKlK/view?usp=sharing&embedded=true" width="100%" height="600px"></iframe>
+    
+    
 
         <div class="row">
             <!-- Columna para el título, línea azul, descripción y la imagen -->
@@ -81,5 +47,4 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
 </body>
-
-</html>
+<?= $this->endSection()?>
