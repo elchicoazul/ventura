@@ -10,4 +10,10 @@ class Tours extends Model {
         return $Tour->getResult();
     }
 
+    public function insertar($datos){
+        $Categoria = $this->db->table('tours');
+        $Categoria->insert($datos);
+        return $this->db->InsertId();
+    }
+
 }

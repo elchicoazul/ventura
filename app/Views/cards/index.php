@@ -11,14 +11,13 @@
                 </h1>
             </div>
             <div class="row">
-            <?php foreach ($datos as $key): ?>
-            <div class="col-lg-4 col-md-6 mb-4">
-                <div class="package-item bg-white h-100">
-                    <div class="img-container" style="height: 200px; overflow: hidden;">
-                        <img class="img-fluid" src="<?php echo $key->url_img?>" alt="">
-                    </div>
-                    <div class="p-4 d-flex flex-column justify-content-between">
-                        <div>
+
+                <?php foreach ($datos as $key): ?>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="package-item bg-white mb-2">
+                        <img class="img-fluid" src="<?php echo base_url('assets/imagen/tour/' . $key->url_img); ?>" alt="">
+                        <div class="p-4">
+
                             <div class="d-flex justify-content-between mb-3">
                                 <small class="m-0"><i class="fa fa-map-marker-alt text-primary mr-2"></i><?php echo $key->ciudad?></small>
                                 <small class="m-0"><i class="fa fa-calendar-alt text-primary mr-2"></i><?php echo $key->dias?></small>

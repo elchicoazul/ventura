@@ -1,0 +1,162 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+  display: flex;
+}
+
+.sidebar {
+  width: 200px;
+  background-color: #333;
+  color: white;
+}
+
+.sidebar-header {
+  padding: 15px;
+  font-weight: bold;
+  font-size: 1.2rem;
+  background-color: #444;
+}
+
+.sidebar-body {
+  padding: 15px;
+}
+
+.chat-window {
+  flex: 1;
+  height: 100vh;
+  border-left: 1px solid #ccc;
+}
+
+.chat-header {
+  padding: 10px;
+  background-color: #444;
+  color: white;
+  font-weight: bold;
+}
+
+.chat-body {
+  padding: 10px;
+  height: calc(100vh - 120px); /* Restar el espacio de la cabecera y el pie de chat */
+  overflow-y: auto;
+}
+
+.chat-footer {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border-top: 1px solid #ccc;
+}
+
+input[type="text"] {
+  flex: 1;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+button {
+  padding: 8px 15px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+/* Estilos para los mensajes del chat */
+.message {
+  background-color: #4CAF50;
+  color: white;
+  padding: 8px;
+  margin: 5px 0;
+  border-radius: 5px;
+}
+
+.user-message {
+  background-color: #2196F3;
+}
+
+.bot-message {
+  background-color: #4CAF50;
+}
+
+.sidebar-menu {
+  list-style: none; /* Eliminamos los puntos de la lista */
+  padding: 0;
+}
+
+.sidebar-menu li {
+  margin-bottom: 10px;
+  list-style-type: none; /* Esto elimina los puntos de la lista <li> */
+}
+
+.sidebar-menu li a {
+  color: white;
+  text-decoration: none;
+  padding: 5px 10px;
+  display: block;
+}
+
+.sidebar-menu li a:hover {
+  background-color: #444;
+  border-radius: 5px;
+}
+
+/* Estilos adicionales para hacer el sidebar responsive */
+h1 {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+  
+  form {
+    background-color: #444;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+  }
+  
+  label {
+    display: block;
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  
+  input[type="text"],
+  input[type="file"] {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    background-color: #333;
+    color: #fff;
+    margin-bottom: 20px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+  }
+  
+  input[type="submit"] {
+    padding: 12px 20px;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    background-color: #1a8cff;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  input[type="submit"]:hover {
+    background-color: #0052cc;
+  }
+
+/* Agregar más estilos de mensajes para diferentes participantes si es necesario */
