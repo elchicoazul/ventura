@@ -17,6 +17,7 @@ class Cards extends BaseController
         ];
         return view('cards/index',$data);
     }
+
     public function contenido($idtours)
     {
         $Detail = new Detail();
@@ -24,9 +25,11 @@ class Cards extends BaseController
         $AllDetail=$Detail->obtenerdetalle($datas);
         $Tours = new Tours();
         $AllTours=$Tours->listartourtop();
+
         $data =[
             "datos" => $AllDetail,
             "tours" => $AllTours,
+
                     
         ];
         return view('cards/contenido',$data);

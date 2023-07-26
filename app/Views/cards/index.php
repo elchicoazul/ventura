@@ -1,22 +1,24 @@
 
 <?= $this->extend('Menu/menu')?>
 <?= $this->section('contenido')?>
-<?php foreach ($datos as $key): ?>
 
-<?php endforeach; ?> 
 <!-- Packages Start -->
 <div class="container-fluid py-5">
         <div class="container pt-5 pb-3">
             <div class="text-center mb-3 pb-3">
-                <h6 class="text-primary text-uppercase" style="letter-spacing: 5px;">Packages</h6>
-                <h1>Pefect Tour Packages</h1>
+                <h6 class="text-primary text-uppercase" style="letter-spacing: 5px;">Paquetes</h6>
+                <h1>El Paquete Perfecto
+                </h1>
             </div>
             <div class="row">
-                <?php foreach ($datos as $key): ?>
-                <div class="col-lg-4 col-md-6 mb-4">
-                    <div class="package-item bg-white mb-2">
+            <?php foreach ($datos as $key): ?>
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="package-item bg-white h-100">
+                    <div class="img-container" style="height: 200px; overflow: hidden;">
                         <img class="img-fluid" src="<?php echo $key->url_img?>" alt="">
-                        <div class="p-4">
+                    </div>
+                    <div class="p-4 d-flex flex-column justify-content-between">
+                        <div>
                             <div class="d-flex justify-content-between mb-3">
                                 <small class="m-0"><i class="fa fa-map-marker-alt text-primary mr-2"></i><?php echo $key->ciudad?></small>
                                 <small class="m-0"><i class="fa fa-calendar-alt text-primary mr-2"></i><?php echo $key->dias?></small>
@@ -30,10 +32,13 @@
                                 </div>
                             </div>
                         </div>
+                        <!-- Opcionalmente, puedes agregar más contenido en la parte inferior de la tarjeta aquí -->
                     </div>
                 </div>
-                <?php endforeach; ?>
             </div>
+            <?php endforeach; ?>
+        </div>
+
         </div>
     </div>
     <!-- Packages End -->
