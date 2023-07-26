@@ -30,6 +30,8 @@ $routes->set404Override();
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
 $routes->get('/', 'cards::index');
+$routes->get('/adm', 'Adm::index');
+$routes->post('/adm/insertar', 'Adm::insertar');
 $routes->get('/cards', 'cards::index');
 $routes->get('/layout', 'Home::index');
 $routes->get('/Tours/(:any)', 'cards::contenido/1$');

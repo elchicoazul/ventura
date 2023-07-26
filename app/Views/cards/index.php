@@ -15,7 +15,7 @@
                 <?php foreach ($datos as $key): ?>
                 <div class="col-lg-4 col-md-6 mb-4">
                     <div class="package-item bg-white mb-2">
-                        <img class="img-fluid" src="<?php echo $key->url_img?>" alt="">
+                        <img class="img-fluid" src="<?php echo base_url('assets/imagen/tour/' . $key->url_img); ?>" alt="">
                         <div class="p-4">
                             <div class="d-flex justify-content-between mb-3">
                                 <small class="m-0"><i class="fa fa-map-marker-alt text-primary mr-2"></i><?php echo $key->ciudad?></small>
