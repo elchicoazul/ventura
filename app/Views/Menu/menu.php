@@ -35,7 +35,7 @@
                     <div class="d-inline-flex align-items-center">
                         <p><i class="fa fa-envelope mr-2"></i>info@example.com</p>
                         <p class="text-body px-3">|</p>
-                        <p><i class="fa fa-phone-alt mr-2"></i>+012 345 6789</p>
+                        <p><i class="fa fa-phone-alt mr-2"></i>+51 345 678 129</p>
                     </div>
                 </div>
                 <div class="col-lg-6 text-center text-lg-right">
@@ -67,18 +67,18 @@
     <div class="container-fluid position-relative nav-bar p-0">
         <div class="container-lg position-relative p-0 px-lg-3" style="z-index: 9;">
             <nav class="navbar navbar-expand-lg bg-light navbar-light shadow-lg py-3 py-lg-0 pl-3 pl-lg-5">
-                <a href="" class="navbar-brand">
-                    <h1 class="m-0 text-primary"><span class="text-dark">ventura</span>travel</h1>
+                <a href="<?php echo base_url(); ?>/" class="navbar-brand">
+                    <h1 class="m-0 text-primary"><span class="text-dark">Ventura</span>Travel</h1>
                 </a>
                 <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse justify-content-between px-3" id="navbarCollapse">
                     <div class="navbar-nav ml-auto py-0">
-                        <a href="index.html" class="nav-item nav-link active">Home</a>
-                        <a href="about.html" class="nav-item nav-link">About</a>
+                        <a href="<?php echo base_url(); ?>/" class="nav-item nav-link active">Inicio</a>
+                        <a href="about.html" class="nav-item nav-link">Acerca de</a>
                         <a href="service.html" class="nav-item nav-link">Services</a>
-                        <a href="package.html" class="nav-item nav-link">Tour Packages</a>
+                        <a href="package.html" class="nav-item nav-link">Paquetes</a>
                         <div class="nav-item dropdown">
                             <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Pages</a>
                             <div class="dropdown-menu border-0 rounded-0 m-0">
@@ -89,7 +89,7 @@
                                 <a href="testimonial.html" class="dropdown-item">Testimonial</a>
                             </div>
                         </div>
-                        <a href="contact.html" class="nav-item nav-link">Contact</a>
+                        <a href="contact.html" class="nav-item nav-link">Contáctanos</a>
                     </div>
                 </div>
             </nav>
@@ -106,9 +106,9 @@
                     <img class="w-100" src="<?php echo base_url(); ?>/assets/img/carousel-1.jpg" alt="Image">
                     <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
                         <div class="p-3" style="max-width: 900px;">
-                            <h4 class="text-white text-uppercase mb-md-3">Tours & Travel</h4>
-                            <h1 class="display-3 text-white mb-md-4">Let's Discover The World Together</h1>
-                            <a href="" class="btn btn-primary py-md-3 px-md-5 mt-2">Book Now</a>
+                            <h4 class="text-white text-uppercase mb-md-3">Excursiones & Viajes</h4>
+                            <h1 class="display-3 text-white mb-md-4">Descubramos El Mundo Juntos</h1>
+                            <a href="" class="btn btn-primary py-md-3 px-md-5 mt-2">Reservar Ahora</a>
                         </div>
                     </div>
                 </div>
@@ -116,9 +116,9 @@
                     <img class="w-100" src="<?php echo base_url(); ?>/assets/img/carousel-2.jpg" alt="Image">
                     <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
                         <div class="p-3" style="max-width: 900px;">
-                            <h4 class="text-white text-uppercase mb-md-3">Tours & Travel</h4>
-                            <h1 class="display-3 text-white mb-md-4">Discover Amazing Places With Us</h1>
-                            <a href="" class="btn btn-primary py-md-3 px-md-5 mt-2">Book Now</a>
+                            <h4 class="text-white text-uppercase mb-md-3">Excursiones & Viajes</h4>
+                            <h1 class="display-3 text-white mb-md-4">Descubre Lugares Increíbles Con Nosotros</h1>
+                            <a href="" class="btn btn-primary py-md-3 px-md-5 mt-2">Reservar Ahora</a>
                         </div>
                     </div>
                 </div>
@@ -136,7 +136,6 @@
         </div>
     </div>
     <!-- Carousel End -->
-
 
     <!-- Booking Start -->
     <div class="container-fluid booking mt-5 pb-5">
@@ -191,8 +190,6 @@
     <!-- Booking End -->
 
     <?= $this->renderSection('contenido') ?>
-   
-
 
     <!-- Footer Start -->
     <div class="container-fluid bg-dark text-white-50 py-5 px-sm-3 px-lg-5" style="margin-top: 90px;">
