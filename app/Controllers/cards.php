@@ -22,9 +22,11 @@ class Cards extends BaseController
         $Detail = new Detail();
         $datas=["tours.tours_id" => $idtours];
         $AllDetail=$Detail->obtenerdetalle($datas);
-        
+        $Tours = new Tours();
+        $AllTours=$Tours->listartourtop();
         $data =[
             "datos" => $AllDetail,
+            "tours" => $AllTours,
                     
         ];
         return view('cards/contenido',$data);

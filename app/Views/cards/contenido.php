@@ -2,6 +2,7 @@
     $imagen=$datos[0]['img_portada'];
     $descripcion=$datos[0]['descripcion'];
     $itinerario=$datos[0]['itinerario'];
+    $nombre=$datos[0]['nombre'];
     ?>
     <?= $this->extend('Menu/layout')?>
     <?= $this->section('contenido')?>
@@ -13,7 +14,7 @@
                 <div class="d-inline-flex text-white">
                     <p class="m-0 text-uppercase"><a class="text-white" href="">Home</a></p>
                     <i class="fa fa-angle-double-right pt-1 px-3"></i>
-                    <p class="m-0 text-uppercase">Blog Detail</p>
+                    <p class="m-0 text-uppercase"><?= $nombre; ?></p>
                 </div>
             </div>
         </div>

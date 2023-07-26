@@ -5,5 +5,9 @@ class Tours extends Model {
         $Tour = $this->db->query("SELECT * FROM `tours`  order by `tours_id` desc");
         return $Tour->getResult();
     }
+    public function listartourtop(){
+        $Tour = $this->db->query("SELECT  * FROM `tours`  order by `tours_id` desc LIMIT 4;");
+        return $Tour->getResult();
+    }
 
 }
