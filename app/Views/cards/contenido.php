@@ -1,4 +1,8 @@
-
+    <?php 
+    $imagen=$datos[0]['img_portada'];
+    $descripcion=$datos[0]['descripcion'];
+    $itinerario=$datos[0]['itinerario'];
+    ?>
     <?= $this->extend('Menu/layout')?>
     <?= $this->section('contenido')?>
     <!-- Header Start -->
@@ -25,7 +29,7 @@
                     <div class="pb-3">
                         <div class="blog-item">
                             <div class="position-relative">
-                                <img class="img-fluid w-100" src="img/blog-1.jpg" alt="">
+                                <img class="img-fluid w-100" src="<?= $imagen; ?>" alt="">
                                 <div class="blog-date">
                                     <h6 class="font-weight-bold mb-n1">01</h6>
                                     <small class="text-white text-uppercase">Jan</small>
@@ -39,18 +43,8 @@
                                 <a class="text-primary text-uppercase text-decoration-none" href="">Tours & Travel</a>
                             </div>
                             <h2 class="mb-3">Dolor justo sea kasd lorem clita justo diam amet</h2>
-                            <p>Sadipscing labore amet rebum est et justo gubergren. Et eirmod ipsum sit diam ut
-                                magna lorem. Nonumy vero labore lorem sanctus rebum et lorem magna kasd, stet
-                                amet magna accusam consetetur eirmod. Kasd accusam sit ipsum sadipscing et at at
-                                sanctus et. Ipsum sit gubergren dolores et, consetetur justo invidunt at et
-                                aliquyam ut et vero clita. Diam sea sea no sed dolores diam nonumy, gubergren
-                                sit stet no diam kasd vero.</p>
-                            <p>Voluptua est takimata stet invidunt sed rebum nonumy stet, clita aliquyam dolores
-                                vero stet consetetur elitr takimata rebum sanctus. Sit sed accusam stet sit
-                                nonumy kasd diam dolores, sanctus lorem kasd duo dolor dolor vero sit et. Labore
-                                ipsum duo sanctus amet eos et. Consetetur no sed et aliquyam ipsum justo et,
-                                clita lorem sit vero amet amet est dolor elitr, stet et no diam sit. Dolor erat
-                                justo dolore sit invidunt.</p>
+                            <p><?= $descripcion; ?></p>
+                            
                             <h4 class="mb-3">Est dolor lorem et ea</h4>
                             <img class="img-fluid w-50 float-left mr-4 mb-2" src="img/blog-2.jpg">
                             <p>Diam dolor est labore duo invidunt ipsum clita et, sed et lorem voluptua tempor

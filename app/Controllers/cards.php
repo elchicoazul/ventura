@@ -17,11 +17,11 @@ class Cards extends BaseController
         ];
         return view('cards/index',$data);
     }
-    public function contenido()
+    public function contenido($idtours)
     {
         $Detail = new Detail();
-        
-        $AllDetail=$Detail->listarDetail();
+        $datas=["tours.tours_id" => $idtours];
+        $AllDetail=$Detail->obtenerdetalle($datas);
         
         $data =[
             "datos" => $AllDetail,
