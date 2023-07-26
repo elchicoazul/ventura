@@ -3,7 +3,7 @@
 <?= $this->section('contenido')?>
 <?php foreach ($datos as $key): ?>
 
-<?php endforeach; ?>
+<?php endforeach; ?> 
 <!-- Packages Start -->
 <div class="container-fluid py-5">
         <div class="container pt-5 pb-3">
@@ -15,18 +15,18 @@
                 <?php foreach ($datos as $key): ?>
                 <div class="col-lg-4 col-md-6 mb-4">
                     <div class="package-item bg-white mb-2">
-                        <img class="img-fluid" src="img/package-1.jpg" alt="">
+                        <img class="img-fluid" src="<?php echo $key->url_img?>" alt="">
                         <div class="p-4">
                             <div class="d-flex justify-content-between mb-3">
-                                <small class="m-0"><i class="fa fa-map-marker-alt text-primary mr-2"></i>Thailand</small>
-                                <small class="m-0"><i class="fa fa-calendar-alt text-primary mr-2"></i>3 days</small>
+                                <small class="m-0"><i class="fa fa-map-marker-alt text-primary mr-2"></i><?php echo $key->ciudad?></small>
+                                <small class="m-0"><i class="fa fa-calendar-alt text-primary mr-2"></i><?php echo $key->dias?></small>
                                 <small class="m-0"><i class="fa fa-user text-primary mr-2"></i><?php echo $key->personas ?></small>
                             </div>
-                            <a class="h5 text-decoration-none" href="<?php echo base_url(); ?>/contenido/valor">Discover amazing places of the world with us</a>
+                            <a class="h5 text-decoration-none" href="<?php echo base_url(); ?>/Tours/<?php echo $key->nombre?>"><?php echo $key->nombre?></a>
                             <div class="border-top mt-4 pt-4">
                                 <div class="d-flex justify-content-between">
                                     <h6 class="m-0"><i class="fa fa-star text-primary mr-2"></i>4.5 <small>(250)</small></h6>
-                                    <h5 class="m-0">$350</h5>
+                                    <h4 class="m-0">S/.<?php echo $key->precio?></h4>
                                 </div>
                             </div>
                         </div>

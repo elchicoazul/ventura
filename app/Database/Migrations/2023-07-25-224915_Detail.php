@@ -4,49 +4,52 @@ namespace App\Database\Migrations;
 
 use CodeIgniter\Database\Migration;
 
-class Tours extends Migration
+class Detail extends Migration
 {
     public function up()
     {
         $this->forge->addField([
-            'tours_id' => [
+            'id_detalle_tours' => [
                 'type'           => 'INT',
                 'constraint'     => 5,
                 'unsigned'       => true,
                 'auto_increment' => true,
             ],
-            'nombre' => [
-                'type'       => 'VARCHAR',
-                'constraint' => '100',
+            'id_tours' => [
+                'type' => 'INT',
             ],
-            'url_img' => [
+            'descripcion' => [
                 'type' => 'TEXT',
                 'null' => true,
             ],
-            'dias' => [
+            'itinerario' => [
                 'type' => 'TEXT',
                 'null' => true,
             ],
-            'personas' => [
+            'img_portada' => [
                 'type' => 'TEXT',
                 'null' => true,
             ],
-            'ciudad' => [
+            'tipo_viaje' => [
                 'type' => 'TEXT',
                 'null' => true,
             ],
-            'precio' => [
-                'type' => 'double',
+            'altitud_max' => [
+                'type' => 'TEXT',
+                'null' => true,
+            ],
+            'dificultad' => [
+                'type' => 'TEXT',
                 'null' => true,
             ],
             
         ]);
-        $this->forge->addKey('tours_id', true);
-        $this->forge->createTable('tours');
+        $this->forge->addKey('id_detalle_tours', true);
+        $this->forge->createTable('detail');
     }
 
     public function down()
     {
-        $this->forge->dropTable('tours');
+        $this->forge->dropTable('detail');
     }
 }
