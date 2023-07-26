@@ -26,6 +26,10 @@ class Detail extends Migration
                 'type' => 'TEXT',
                 'null' => true,
             ],
+            'lista_viaje' => [
+                'type' => 'TEXT',
+                'null' => true,
+            ],
             'img_portada' => [
                 'type' => 'TEXT',
                 'null' => true,

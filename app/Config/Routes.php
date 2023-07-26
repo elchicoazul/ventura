@@ -34,7 +34,7 @@ $routes->get('/adm', 'Adm::index');
 $routes->post('/adm/insertar', 'Adm::insertar');
 $routes->get('/cards', 'cards::index');
 $routes->get('/layout', 'Home::index');
-$routes->get('/Tours/(:any)', 'cards::contenido/1$');
+$routes->get('/Tours/(:any)', 'cards::contenido/$1');
 
 /*
  * --------------------------------------------------------------------

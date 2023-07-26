@@ -1,8 +1,18 @@
     <?php 
     $imagen=$datos[0]['img_portada'];
+    $imagenT=$datos[0]['url_img'];
     $descripcion=$datos[0]['descripcion'];
     $itinerario=$datos[0]['itinerario'];
+    $lista=$datos[0]['lista_viaje'];
     $nombre=$datos[0]['nombre'];
+    $duracion=$datos[0]['dias'];
+    $lugar=$datos[0]['ciudad'];
+    $personas=$datos[0]['personas'];
+    $viaje=$datos[0]['tipo_viaje'];
+    $altitud=$datos[0]['altitud_max'];
+    $dificultad=$datos[0]['dificultad'];
+    $precio=$datos[0]['precio']
+
     ?>
     <?= $this->extend('Menu/layout')?>
     <?= $this->section('contenido')?>
@@ -12,7 +22,7 @@
             <div class="d-flex flex-column align-items-center justify-content-center" style="min-height: 400px">
                 <h3 class="display-4 text-white text-uppercase">Detalle del Tour</h3>
                 <div class="d-inline-flex text-white">
-                    <p class="m-0 text-uppercase"><a class="text-white" href="">Home</a></p>
+                    <p class="m-0 text-uppercase"><a class="text-white" href="<?php echo base_url(); ?>">Home</a></p>
                     <i class="fa fa-angle-double-right pt-1 px-3"></i>
                     <p class="m-0 text-uppercase"><?= $nombre; ?></p>
                 </div>
@@ -26,7 +36,85 @@
         <div class="container py-5">
             <div class="row">
                 <div class="col-lg-8">
-                    <!-- Blog Detail Start -->
+
+                            <div class="container pt-6 pb-4">
+                                <div class="row">
+                                    <!-- Duración -->
+                                    <div class="col-lg-4 col-md-6 mb-4">
+                                        <div class="package-item bg-white mb-2 rounded">
+                                            <div class="d-flex align-items-center text-decoration-none bg-white mb-3">
+                                                <i class="fas fa-clock" style="color: #80b434; font-size: 24px; margin-left: 30px;margin-right: 10px;"></i>
+                                                <div class="ms-5">
+                                                    <small class="m-2">Duracion:</small><br>
+                                                    <small style="color: #80b434;"><?= $duracion?></small>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <!-- Lugar -->
+                                    <div class="col-lg-4 col-md-6 mb-4">
+                                        <div class="package-item bg-white mb-2 rounded">
+                                            <div class="d-flex align-items-center text-decoration-none bg-white mb-3">
+                                                <i class="fas fa-map-marker-alt" style="color: #80b434; font-size: 24px; margin-left: 30px;margin-right: 10px;"></i>
+                                                <div class="ms-5">
+                                                    <small class="m-2">Lugar:</small><br>
+                                                    <small style="color: #80b434;"><?= $lugar?></small>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Personas -->
+                                    <div class="col-lg-4 col-md-6 mb-4">
+                                        <div class="package-item bg-white mb-2 rounded">
+                                            <div class="d-flex align-items-center text-decoration-none bg-white mb-3">
+                                                <i class="fas fa-users" style="color: #80b434; font-size: 24px; margin-left: 30px;margin-right: 10px;"></i>
+                                                <div class="ms-5">
+                                                    <small class="m-2">Max.Personas:</small><br>
+                                                    <small style="color: #80b434;"><?= $personas?></small>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- tipo de viaje  -->
+                                    <div class="col-lg-4 col-md-6 mb-4">
+                                        <div class="package-item bg-white mb-2 rounded">
+                                            <div class="d-flex align-items-center text-decoration-none bg-white mb-3">
+                                                <i class="fas fa-walking" style="color: #80b434; font-size: 24px; margin-left: 30px;margin-right: 10px;"></i>
+                                                <div class="ms-5">
+                                                    <small class="m-2">Tipo.Viaje:</small><br>
+                                                    <small style="color: #80b434;"><?= $viaje?></small>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Altitud Maxima  -->
+                                    <div class="col-lg-4 col-md-6 mb-4">
+                                        <div class="package-item bg-white mb-2 rounded">
+                                            <div class="d-flex align-items-center text-decoration-none bg-white mb-3">
+                                                <i class="fas fa-mountain" style="color: #80b434; font-size: 24px; margin-left: 30px;margin-right: 10px;"></i>
+                                                <div class="ms-5">
+                                                    <small class="m-2">Max.Altitud:</small><br>
+                                                    <small style="color: #80b434;"><?= $altitud?></small>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Dificultad  -->
+                                    <div class="col-lg-4 col-md-6 mb-4">
+                                        <div class="package-item bg-white mb-2 rounded">
+                                            <div class="d-flex align-items-center text-decoration-none bg-white mb-3">
+                                                <i class="fas fa-tachometer-alt" style="color: #80b434; font-size: 24px; margin-left: 30px;margin-right: 10px;"></i>
+                                                <div class="ms-5">
+                                                    <small class="m-2">Dificultad:</small><br>
+                                                    <small style="color: #80b434;"><?= $dificultad?></small>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>  
+                            </div>
+
                     <div class="pb-3">
                         <div class="blog-item">
                             <div class="position-relative">
@@ -39,90 +127,48 @@
                         </div>
                         <div class="bg-white mb-3" style="padding: 30px;">
                             <div class="d-flex mb-3">
-                                <a class="text-primary text-uppercase text-decoration-none" href="./">Admin</a>
+                                <a class="text-primary text-uppercase text-decoration-none" href="">Admin</a>
                                 <span class="text-primary px-2">|</span>
                                 <a class="text-primary text-uppercase text-decoration-none" href="">Tours & Travel</a>
                             </div>
-                            <h2 class="mb-3">Dolor justo sea kasd lorem clita justo diam amet</h2>
-                            <p><?= $descripcion; ?></p>
-                            
-                            <h4 class="mb-3">Est dolor lorem et ea</h4>
-                            <img class="img-fluid w-50 float-left mr-4 mb-2" src="img/blog-2.jpg">
-                            <p>Diam dolor est labore duo invidunt ipsum clita et, sed et lorem voluptua tempor
-                                invidunt at est sanctus sanctus. Clita dolores sit kasd diam takimata justo diam
-                                lorem sed. Magna amet sed rebum eos. Clita no magna no dolor erat diam tempor
-                                rebum consetetur, sanctus labore sed nonumy diam lorem amet eirmod. No at tempor
-                                sea diam kasd, takimata ea nonumy elitr sadipscing gubergren erat. Gubergren at
-                                lorem invidunt sadipscing rebum sit amet ut ut, voluptua diam dolores at
-                                sadipscing stet. Clita dolor amet dolor ipsum vero ea ea eos. Invidunt sed diam
-                                dolores takimata dolor dolore dolore sit. Sit ipsum erat amet lorem et, magna
-                                sea at sed et eos. Accusam eirmod kasd lorem clita sanctus ut consetetur et. Et
-                                duo tempor sea kasd clita ipsum et.</p>
-                            <h5 class="mb-3">Est dolor lorem et ea</h5>
-                            <img class="img-fluid w-50 float-right ml-4 mb-2" src="img/blog-3.jpg">
-                            <p>Diam dolor est labore duo invidunt ipsum clita et, sed et lorem voluptua tempor
-                                invidunt at est sanctus sanctus. Clita dolores sit kasd diam takimata justo diam
-                                lorem sed. Magna amet sed rebum eos. Clita no magna no dolor erat diam tempor
-                                rebum consetetur, sanctus labore sed nonumy diam lorem amet eirmod. No at tempor
-                                sea diam kasd, takimata ea nonumy elitr sadipscing gubergren erat. Gubergren at
-                                lorem invidunt sadipscing rebum sit amet ut ut, voluptua diam dolores at
-                                sadipscing stet. Clita dolor amet dolor ipsum vero ea ea eos. Invidunt sed diam
-                                dolores takimata dolor dolore dolore sit. Sit ipsum erat amet lorem et, magna
-                                sea at sed et eos. Accusam eirmod kasd lorem clita sanctus ut consetetur et. Et
-                                duo tempor sea kasd clita ipsum et. Takimata kasd diam justo est eos erat
-                                aliquyam et ut.</p>
+
+                            <!-- Sección de Descripción -->
+                            <div>
+                                <h2 class="mb-3">Descripcion</h2>
+                                <hr style="border-color: #80b434;">
+                                <img class="img-fluid w-50 float-left mr-4 mb-2" src="<?= $imagenT; ?>">
+                                <p><?= $descripcion; ?></p>
+                            </div>
+                            <!-- Fin de la sección de Descripción -->
                         </div>
-                    </div>
-                    <!-- Blog Detail End -->
-    
-                    <!-- Comment List Start -->
+                    </div> 
+
                     <div class="bg-white" style="padding: 30px; margin-bottom: 30px;">
-                        <h4 class="text-uppercase mb-4" style="letter-spacing: 5px;">3 Comments</h4>
-                        <div class="media mb-4">
-                            <img src="img/user.jpg" alt="Image" class="img-fluid mr-3 mt-1" style="width: 45px;">
-                            <div class="media-body">
-                                <h6><a href="">John Doe</a> <small><i>01 Jan 2045</i></small></h6>
-                                <p>Diam amet duo labore stet elitr invidunt ea clita ipsum voluptua, tempor labore
-                                    accusam ipsum et no at. Kasd diam tempor rebum magna dolores sed sed eirmod ipsum.
-                                    Gubergren clita aliquyam consetetur sadipscing, at tempor amet ipsum diam tempor
-                                    consetetur at sit.</p>
-                                <button class="btn btn-sm btn-outline-primary">Reply</button>
-                            </div>
-                        </div>
-                        <div class="media">
-                            <img src="img/user.jpg" alt="Image" class="img-fluid mr-3 mt-1" style="width: 45px;">
-                            <div class="media-body">
-                                <h6><a href="">John Doe</a> <small><i>01 Jan 2045</i></small></h6>
-                                <p>Diam amet duo labore stet elitr invidunt ea clita ipsum voluptua, tempor labore
-                                    accusam ipsum et no at. Kasd diam tempor rebum magna dolores sed sed eirmod ipsum.
-                                    Gubergren clita aliquyam consetetur sadipscing, at tempor amet ipsum diam tempor
-                                    consetetur at sit.</p>
-                                <button class="btn btn-sm btn-outline-primary">Reply</button>
-                                <div class="media mt-4">
-                                    <img src="img/user.jpg" alt="Image" class="img-fluid mr-3 mt-1"
-                                        style="width: 45px;">
-                                    <div class="media-body">
-                                        <h6><a href="">John Doe</a> <small><i>01 Jan 2045</i></small></h6>
-                                        <p>Diam amet duo labore stet elitr invidunt ea clita ipsum voluptua, tempor
-                                            labore accusam ipsum et no at. Kasd diam tempor rebum magna dolores sed sed
-                                            eirmod ipsum. Gubergren clita aliquyam consetetur sadipscing, at tempor amet
-                                            ipsum diam tempor consetetur at sit.</p>
-                                        <button class="btn btn-sm btn-outline-primary">Reply</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        <h2 class="mb-3">Itinerario</h2>
+                        <hr style="border-color: #80b434;">
+                        <p><?= $itinerario; ?></p>
                     </div>
-                    <!-- Comment List End -->
-    
+                    <div class="bg-white" style="padding: 30px; margin-bottom: 30px;">
+                        <h2 class="mb-3">Que incluye el Paquete</h2>
+                        <hr style="border-color: #80b434;">
+                        <p><?= $lista; ?></p>
+                    </div>
                 </div>
-    
+
+                
                 <div class="col-lg-4 mt-5 mt-lg-0">
-                    
+                    <div class="mb-5">
+                            <div class="bg-white text-center" style="padding: 30px;">
+                            <h4 class="text-uppercase mb-4 " style="letter-spacing: 5px;">  ¡PRECIO! </h4>
+
+                                <h1 style="color: #80b434;">S/. <?= $precio; ?></h1>
+
+                            </div>
+                        </div>
                     <div class="mb-5">
                         <div class="card border-0">
                             <div class="card-header bg-primary text-center p-4">
-                                <h3 class="text-white m-0">Vonsulta tu Viaje</h3>
+                                <h3 class="text-white m-0">Contáctanos</h3>
                             </div>
                             <div class="card-body rounded-bottom bg-white p-5">
                                 <form>
@@ -140,69 +186,28 @@
                                             <option value="3">destination 1</option>
                                         </select>
                                     </div>
+                                    <div class="form-group">
+                                        <textarea id="message" cols="30" rows="5" class="form-control" placeholder='Dejanos un mensaje ...'></textarea>
+                                    </div>
                                     <div>
-                                        <button class="btn btn-primary btn-block py-3" type="submit">Consulta</button>
+                                        <button class="btn btn-primary btn-block py-3" type="submit">Contacta</button>
                                     </div>
                                 </form>
                             </div>
                         </div>
                     </div>
-                    <!-- formualario para usuarios -->
-                    <div class="mb-5">
-                    <div class="bg-white mb-3 " style="padding: 30px;">
-                        <h4 class="text-uppercase mb-4" style="letter-spacing: 5px;">Contactanos</h4>
-                        <form>
-                            <div class="form-group">
-                                <label for="name">Nombre *</label>
-                                <input type="text" class="form-control" id="name">
-                            </div>
-                            <div class="form-group">
-                                <label for="email">Email *</label>
-                                <input type="email" class="form-control" id="email">
-                            </div>
-                            <div class="form-group">
-                                <label for="message">Message *</label>
-                                <textarea id="message" cols="30" rows="5" class="form-control"></textarea>
-                            </div>
-                            <div class="form-group mb-0">
-                                <input type="submit" value="Comenta"
-                                    class="btn btn-primary font-weight-semi-bold py-2 px-3">
-                            </div>
-                        </form>
-                    </div>
-
-                    </div>
                     <!-- Category List -->
                     <div class="mb-5">
-                        <h4 class="text-uppercase mb-4" style="letter-spacing: 5px;">Categories</h4>
+                        <h4 class="text-uppercase mb-4" style="letter-spacing: 5px;">Otros Paquetes</h4>
                         <div class="bg-white" style="padding: 30px;">
+                        <?php foreach ($tours as $key): ?>
                             <ul class="list-inline m-0">
                                 <li class="mb-3 d-flex justify-content-between align-items-center">
-                                    <a class="text-dark" href="#"><i class="fa fa-angle-right text-primary mr-2"></i>Web
-                                        Design</a>
+                                    <a class="text-dark" href="<?php echo base_url(); ?>Tours/<?php echo $key->tours_id?>"><i class="fa fa-angle-right text-primary mr-2"></i><?php echo $key->nombre?></a>
                                     <span class="badge badge-primary badge-pill">150</span>
                                 </li>
-                                <li class="mb-3 d-flex justify-content-between align-items-center">
-                                    <a class="text-dark" href="#"><i class="fa fa-angle-right text-primary mr-2"></i>Web
-                                        Development</a>
-                                    <span class="badge badge-primary badge-pill">131</span>
-                                </li>
-                                <li class="mb-3 d-flex justify-content-between align-items-center">
-                                    <a class="text-dark" href="#"><i
-                                            class="fa fa-angle-right text-primary mr-2"></i>Online Marketing</a>
-                                    <span class="badge badge-primary badge-pill">78</span>
-                                </li>
-                                <li class="mb-3 d-flex justify-content-between align-items-center">
-                                    <a class="text-dark" href="#"><i
-                                            class="fa fa-angle-right text-primary mr-2"></i>Keyword Research</a>
-                                    <span class="badge badge-primary badge-pill">56</span>
-                                </li>
-                                <li class="d-flex justify-content-between align-items-center">
-                                    <a class="text-dark" href="#"><i
-                                            class="fa fa-angle-right text-primary mr-2"></i>Email Marketing</a>
-                                    <span class="badge badge-primary badge-pill">98</span>
-                                </li>
                             </ul>
+                        <?php endforeach; ?> 
                         </div>
                     </div>
     
