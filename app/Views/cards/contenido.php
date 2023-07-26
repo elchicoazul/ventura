@@ -3,6 +3,7 @@
     $imagenT=$datos[0]['url_img'];
     $descripcion=$datos[0]['descripcion'];
     $itinerario=$datos[0]['itinerario'];
+    $lista=$datos[0]['lista_viaje'];
     $nombre=$datos[0]['nombre'];
     $duracion=$datos[0]['dias'];
     $lugar=$datos[0]['ciudad'];
@@ -10,6 +11,7 @@
     $viaje=$datos[0]['tipo_viaje'];
     $altitud=$datos[0]['altitud_max'];
     $dificultad=$datos[0]['dificultad'];
+    $precio=$datos[0]['precio']
 
     ?>
     <?= $this->extend('Menu/layout')?>
@@ -147,15 +149,22 @@
                         <p><?= $itinerario; ?></p>
                     </div>
                     <div class="bg-white" style="padding: 30px; margin-bottom: 30px;">
-                        <h2 class="mb-3">Lista de viaje</h2>
+                        <h2 class="mb-3">Que incluye el Paquete</h2>
                         <hr style="border-color: #80b434;">
-                        <p><?= $itinerario; ?></p>
+                        <p><?= $lista; ?></p>
                     </div>
                 </div>
 
-    
+                
                 <div class="col-lg-4 mt-5 mt-lg-0">
-                    
+                    <div class="mb-5">
+                            <div class="bg-white text-center" style="padding: 30px;">
+                            <h4 class="text-uppercase mb-4 " style="letter-spacing: 5px;">  ¡PRECIO! </h4>
+
+                                <h1 style="color: #80b434;">S/. <?= $precio; ?></h1>
+
+                            </div>
+                        </div>
                     <div class="mb-5">
                         <div class="card border-0">
                             <div class="card-header bg-primary text-center p-4">
