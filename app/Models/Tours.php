@@ -2,7 +2,7 @@
 use CodeIgniter\Model;
 class Tours extends Model {
     public function listartour(){
-        $Tour = $this->db->query("SELECT * FROM `tours`  order by `tours_id` desc");
+        $Tour = $this->db->query("SELECT * FROM `tours`  order by `tours_id` asc");
         return $Tour->getResult();
     }
     public function listartourtop(){

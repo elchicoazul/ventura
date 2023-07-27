@@ -34,9 +34,7 @@ class Cards extends BaseController
             "datos" => $AllTours,
                     
         ];
-        
-        
-           
+         
         return view('cards/ciudad',$data);
     }
 
