@@ -15,5 +15,13 @@ class Tours extends Model {
         $Categoria->insert($datos);
         return $this->db->InsertId();
     }
+    public function listarmenu(){
+        $Tour = $this->db->query("SELECT DISTINCT `ciudad` FROM `tours`  order by `ciudad` desc;");
+        return $Tour->getResult();
+    }
+    public function listarciudad($ciudad){
+        $Tour = $this->db->query("SELECT * FROM `tours` where `ciudad` ='$ciudad'");
+        return $Tour->getResult();
+    }
 
 }

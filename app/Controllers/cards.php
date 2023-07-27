@@ -15,7 +15,29 @@ class Cards extends BaseController
             "datos" => $AllTours,
                     
         ];
+        $menuciudad=$Tours->listarmenu();
+        $menu =[ "MenuDashboard"=>$menuciudad,
+
+        ];
+            $session = session();
+            $session->set($menu);
         return view('cards/index',$data);
+    }
+
+    public function ciudad($ciudad)
+    {
+        $Tours = new Tours();
+        
+        $AllTours=$Tours->listarciudad($ciudad);
+        
+        $data =[
+            "datos" => $AllTours,
+                    
+        ];
+        
+        
+           
+        return view('cards/ciudad',$data);
     }
 
     public function contenido($idtours)
