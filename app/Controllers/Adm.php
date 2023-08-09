@@ -7,7 +7,15 @@ class Adm extends BaseController
 {
     public function index()
     {
-        return view('adm/adm');
+        $Tours = new Tours();
+        
+        $AllTours=$Tours->listartour();
+        
+        $data =[
+            "datos" => $AllTours,
+                    
+        ];
+        return view('adm/index',$data);
     }
     public function detalle($idtours)
     {

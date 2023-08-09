@@ -204,7 +204,7 @@
                             <ul class="list-inline m-0">
                                 <li class="mb-3 d-flex justify-content-between align-items-center">
                                     <a class="text-dark" href="<?php echo base_url(); ?>Tours/<?php echo $key->tours_id?>"><i class="fa fa-angle-right text-primary mr-2"></i><?php echo $key->nombre?></a>
-                                    <span class="badge badge-primary badge-pill">150</span>
+                                    <span class="badge badge-primary badge-pill">S/. <?php echo $key->precio?></span>
                                 </li>
                             </ul>
                         <?php endforeach; ?> 
