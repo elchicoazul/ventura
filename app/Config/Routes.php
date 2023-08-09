@@ -31,11 +31,15 @@ $routes->set404Override();
 // route since we don't have to scan directories.
 $routes->get('/', 'cards::index');
 $routes->get('/adm', 'Adm::index');
+$routes->get('/detalle/(:any)', 'Adm::detalle/$1');
 $routes->post('/adm/insertar', 'Adm::insertar');
+$routes->post('/adm/insertar_detalle_tours', 'Adm::insertardetalle');
+
 $routes->get('/cards', 'cards::index');
 $routes->get('/layout', 'Home::index');
 $routes->get('/Tours/(:any)', 'cards::contenido/$1');
 $routes->get('/ciudad/(:any)', 'cards::ciudad/$1');
+
 
 /*
  * --------------------------------------------------------------------

@@ -118,7 +118,7 @@
                     <div class="pb-3">
                         <div class="blog-item">
                             <div class="position-relative">
-                                <img class="img-fluid w-100" src="<?= $imagen; ?>" alt="">
+                                <img class="img-fluid w-100" src="<?php echo base_url('assets/imagen/tour/' . $imagen); ?>" alt="">
                                 <div class="blog-date">
                                     <h6 class="font-weight-bold mb-n1">01</h6>
                                     <small class="text-white text-uppercase">Jan</small>
@@ -136,7 +136,7 @@
                             <div>
                                 <h2 class="mb-3">Descripcion</h2>
                                 <hr style="border-color: #80b434;">
-                                <img class="img-fluid w-50 float-left mr-4 mb-2" src="<?= $imagenT; ?>">
+                                <img class="img-fluid w-50 float-left mr-4 mb-2" src="<?php echo base_url('assets/imagen/tour/' . $imagenT); ?>">
                                 <p><?= $descripcion; ?></p>
                             </div>
                             <!-- Fin de la sección de Descripción -->

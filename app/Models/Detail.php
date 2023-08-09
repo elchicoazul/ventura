@@ -11,5 +11,10 @@ class Detail extends Model {
         $detalle->where($data);
         return $detalle->get()->getResultArray();
     }
+    public function insertar($datos){
+        $Categoria = $this->db->table('detail');
+        $Categoria->insert($datos);
+        return $this->db->InsertId();
+    }
 
 }
