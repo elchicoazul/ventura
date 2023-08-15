@@ -36,7 +36,7 @@
                     <div class="d-inline-flex align-items-center">
                         <p><i class="fa fa-envelope mr-2"></i>ventura@info.com</p>
                         <p class="text-body px-3">|</p>
-                        <p><i class="fa fa-phone-alt mr-2"></i>+51 987 654 321</p>
+                        <p><i class="fa fa-phone-alt mr-2"></i>+51 961 307 846</p>
                     </div>
                 </div>
                 <div class="col-lg-6 text-center text-lg-right">
@@ -102,7 +102,7 @@
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <img class="w-100" src="<?php echo base_url(); ?>/assets/img/carousel-2.jpg" alt="Image">
+                    <img class="w-100" src="<?php echo base_url(); ?>/assets/img/package-4.jpg" alt="Image">
                     <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
                         <div class="p-3" style="max-width: 900px;">
                             <h4 class="text-white text-uppercase mb-md-3">Excursiones & Viajes</h4>
@@ -209,7 +209,7 @@
             <div class="col-lg-4 col-md-6 mb-5">
                 <h5 class="text-white text-uppercase mb-4" style="letter-spacing: 5px;">Contáctanos</h5>
                 <p><i class="fa fa-map-marker-alt mr-2"></i>123 Peru, Arequipa, Cerro Colorado</p>
-                <p><i class="fa fa-phone-alt mr-2"></i>+51 987 654 321</p>
+                <p><i class="fa fa-phone-alt mr-2"></i>+51 961 307 846</p>
                 <p><i class="fa fa-envelope mr-2"></i>ventura@info.com</p>
                 <h6 class="text-white text-uppercase mt-4 mb-3" style="letter-spacing: 5px;">Información</h6>
                 <div class="w-100">
